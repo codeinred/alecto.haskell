@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  ihaskell:
+    image: codeinred/ihaskell:latest
+    restart: always
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebooks:/notebooks
+      - ./Parse:/notebooks/Parse
+      - ./Util:/notebooks/Util
+      - ./notebooks/.jupyter:/root/.jupyter
